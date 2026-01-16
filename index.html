@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>T-shirt size – pose demo</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 16px; }
+    .wrap { max-width: 720px; }
+    video, canvas { width: 100%; max-width: 720px; border-radius: 12px; }
+    .row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    button { padding: 10px 12px; border-radius: 10px; border: 1px solid #ccc; background: #fff; cursor: pointer; }
+    #status { margin-top: 10px; opacity: 0.85; }
+    #log { white-space: pre-wrap; font-size: 12px; background: #f6f6f6; padding: 10px; border-radius: 10px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Pose demo (web, GitHub Pages)</h1>
+    <video id="video" autoplay playsinline muted></video>
+    <canvas id="canvas"></canvas>
+
+    <div class="row">
+      <button id="btnStart">Start camera</button>
+      <button id="btnStop" disabled>Stop</button>
+    </div>
+
+    <div id="status">Ready.</div>
+    <div id="log"></div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
